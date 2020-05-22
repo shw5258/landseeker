@@ -62,6 +62,6 @@ app.use('/', indexRoutes)
 app.use('/commissions', commissionRoutes)
 app.use("/commissions/:id/comments", commentRoutes)
 
-app.listen(3000, () => {
-	console.log('server on port 3000')
+app.listen(process.env.PORT, () => {
+	console.log(`server on port ${process.env.PORT}`)
 })
