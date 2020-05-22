@@ -1,0 +1,20 @@
+<%- include("../partials/header1") %>
+    <link href="/main.css" rel="stylesheet" type="text/css">
+<%- include("../partials/header2") %>
+		<div class="container">
+			<br>
+			<h2><%=commission.title%></h2>
+			<p><%=commission.contents%></p>
+			<p><%=commission.email%></p>
+			<p><%=commission.phone%></p>
+			<p><%=commission.person%></p>
+		</div>
+		<div class="container">
+			<p>
+				<a class='btn btn-primary btn-md' href='/commissions/<%=commission._id%>/comments/new' role='button'>댓글</a>
+			</p>
+			<% commission.comments.forEach((comment) => { %>
+				<p><%=comment.text%>	<strong><%=comment.author%></strong></p>
+			<% }) %>
+		</div>
+<%- include("../partials/footer") %>

@@ -1,0 +1,18 @@
+<%- include("../partials/header1") %>
+    <link href="/main.css" rel="stylesheet" type="text/css">
+<%- include("../partials/header2") %>
+		<div class='container' id='new'>
+			<form action='/commissions/<%= commission._id %>/comments' method='POST'>
+				<div class="form-group">
+					<label for="person">작성자</label>
+					<input class="form-control" type="text" name='comment[author]' id="person">
+				</div>
+				<div class="form-group">
+					<label for="contents">댓글 내용</label>
+					<textarea class="form-control" name='comment[text]' id="contents" rows="10" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">제출</button>
+				<a class='btn btn-outline-primary' href='/commissions/<%= commission._id %>'>취소</a>
+			</form>
+		</div>
+<%- include("../partials/footer") %>

@@ -1,0 +1,101 @@
+<%- include("partials/header1") %>
+    <link href="/form-validation.css" rel="stylesheet" type="text/css">
+<%- include("partials/header2") %>
+<div class="container">
+	<br>
+	<div class="mb-4 text-center">
+		<h2>환영합니다</h2>
+		<p class="lead">전국의 공인중개사와 파트너가 되어보세요. 의뢰를 등록하여 빠르게 목적에 맞는 땅을 찾을 수 있습니다</p>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-md-8 order-md-1">
+			<form class="was-validated" novalidate="" action="/register" method="post">
+				<div class="row">
+					<!-- <div class="col-sm-6 form-group">
+						<label for="id">ID</label>
+						<div class="input-group">
+							<input type="text" 
+								   class="form-control" 
+								   name="user[id]"
+								   id="id"
+								   required autofocus>
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button">확인</button>
+							</div>
+							<div class="invalid-feedback">적당한 ID를 입력하세요</div>
+						</div>
+					</div> -->
+					<div class="col-sm-6 form-group">
+						<label for="username">별명</label>
+						<div class="input-group">
+							<input type="text"
+								   class="form-control"
+								   name="username"
+								   id="username"
+								   placeholder="**공인중개사"
+								   required>
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button">확인</button>
+							</div>
+						<div class="invalid-feedback">별명이 필요합니다</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="password">비밀번호</label>
+						<input type="password" 
+							   class="form-control" 
+							   name="password" 
+							   id="password" 
+							   required>
+						<div class="invalid-feedback">비밀번호가 필요합니다</div>
+					</div>
+					<!-- <div class="col-sm-6 form-group">
+						<label for="email">이메일 <span class="text-muted">(선택)</span></label>
+						<input type="email" 
+							   class="form-control" 
+							   id="email"
+							   name="user[email]">
+						<div class="invalid-feedback">유효한 이메일 주소를 입력하세요</div>
+					</div> -->
+				</div>
+				<!-- <div class="row">
+					<div class="col-sm form-group">
+						<label for="address">주소 <span class="text-muted">(선택)</span></label>
+						<input type="text" 
+							   class="form-control" 
+							   id="address"
+							   name="user[address]">
+					</div>
+				</div> -->
+				<div class="row">
+					<div class="col-sm form-group">
+						<div class="custom-control custom-checkbox">
+							<input class="custom-control-input" type="checkbox" id="agreeCheck" required>
+							<label class="custom-control-label" for="agreeCheck">
+								개인정보이용에 동의하시면 체크해주세요
+							</label>
+							<div class="invalid-feedback">동의하지 않으시면 가입되지 않습니다</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm">
+						<button class="btn btn-primary btn-lg btn-block" type="submit">가입신청</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<footer class="my-5 pt-5 text-muted text-center text-small">
+		<p class="mb-1">© 2019-2020 (주)땅찾사</p>
+		<ul class="list-inline">
+			<li class="list-inline-item"><a href="#">개인정보</a></li>
+			<li class="list-inline-item"><a href="#">약관</a></li>
+			<li class="list-inline-item"><a href="#">고객센터</a></li>
+		</ul>
+	</footer>
+</div>
+<%- include("partials/footer") %>

@@ -1,0 +1,31 @@
+<%- include("../partials/header1") %>
+    <link href="/main.css" rel="stylesheet" type="text/css">
+<%- include("../partials/header2") %>
+		<div class='container' id='new'>
+			<form action='/commissions' method='POST'>
+				
+				<div class="form-group">
+					<label for="email">이메일</label>
+					<input class="form-control" type="email" name='commission[email]' id="email">
+				</div>
+				<div class="form-group">
+					<label for="title">전화번호</label>
+					<input class="form-control" type="text" name='commission[phone]' id="phone">
+				</div>
+				<div class="form-group">
+					<label for="title">의뢰자</label>
+					<input class="form-control" type="text" name='commission[person]' id="person">
+				</div>
+				<div class="form-group">
+					<label for="title">제목</label>
+					<input class="form-control" type="text" name='commission[title]' id="title" required>
+				</div>
+				<div class="form-group">
+					<label for="contents">의뢰 내용</label>
+					<textarea class="form-control" name='commission[contents]' id="contents" rows="10" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">제출</button>
+				<a class='btn btn-outline-primary' href='/commissions'>취소</a>
+			</form>
+		</div>
+<%- include("../partials/footer") %>

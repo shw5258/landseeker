@@ -1,0 +1,32 @@
+<%- include("../partials/header1") %>
+    <link href="/main.css" rel="stylesheet" type="text/css">
+<%- include("../partials/header2") %>
+		<div class='jumbotron'>
+			<div class='container'>
+				<h1 class="display-3">
+					내가 상상하던 땅!
+				</h1>
+				<p>
+					규제법률이란 높은 장벽에 막혀 엄두내지 못했던 땅투자 이제 상상하던 대로 땅을 구매하세요
+				</p>
+				<p>
+					<a class='btn btn-primary btn-lg' href='/commissions/new' role='button'>
+						구매 의뢰하기
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class='row'>
+				<% site.forEach((commission) => { %>
+				<div class="col-md-4">
+					<h2><%=commission.title%></h2>
+					<p><%- commission.contents.substring(0, 100) %> ...</p>
+					<p><a class="btn btn-secondary" 
+						  href="/commissions/<%=commission.id%>" 
+						  role="button">자세히보기 &raquo;</a></p>
+				  </div>
+				<% }) %>
+			</div>
+		</div>
+<%- include("../partials/footer") %>
